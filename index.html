@@ -11,50 +11,20 @@
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      "name": "סחלב מצנחים - טיסות חוויה",
-      "description": "טיסות רחיפה אקרובטיות בנתניה עם אוהד סחלב. טייס קל משקל, ביצועים לפי מוזיקה.",
+      "name": "סחלב מצנחים",
       "provider": {
         "@type": "LocalBusiness",
         "name": "סחלב מצנחים",
-        "telephone": "0506968511",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Netanya",
-          "streetAddress": "כיכר פנצ'ו"
-        }
+        "telephone": "0506968511"
       },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "חבילות טיסה 2026",
+        "name": "חבילות טיסה",
         "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": { "@type": "Service", "name": "טעימה מהשמיים - 10 דקות" },
-            "price": "300.00",
-            "priceCurrency": "ILS"
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": { "@type": "Service", "name": "החוויה המומלצת - 15 דקות" },
-            "price": "400.00",
-            "priceCurrency": "ILS"
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": { "@type": "Service", "name": "טיסה ללא גבולות - 20 דקות" },
-            "price": "450.00",
-            "priceCurrency": "ILS"
-          }
+          { "@type": "Offer", "itemOffered": { "name": "10 דקות" }, "price": "300" },
+          { "@type": "Offer", "itemOffered": { "name": "15 דקות" }, "price": "400" },
+          { "@type": "Offer", "itemOffered": { "name": "20 דקות" }, "price": "450" }
         ]
-      },
-      "potentialAction": {
-        "@type": "BuyAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://your-domain.co.il/api/ai-buy?item={item_name}",
-          "actionPlatform": ["https://schema.org/GeminiDirectPurchase"],
-          "httpMethod": "POST"
-        }
       }
     }
     </script>
@@ -63,8 +33,7 @@
         body { font-family: 'Heebo', sans-serif; }
         .hero-gradient {
             background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1516746817340-977799276274?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
+            background-size: cover; background-position: center;
         }
     </style>
 </head>
@@ -72,43 +41,30 @@
 
     <header class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur shadow-sm p-4 flex justify-between items-center">
         <div class="font-black text-2xl text-blue-600 tracking-tighter">סחלב מצנחים</div>
-        <a href="https://wa.me/972506968511" class="bg-green-500 text-white px-4 py-2 rounded-full font-bold text-sm flex items-center gap-2 transition-transform hover:scale-105">
-            דברו עם אוהד בוואטסאפ
+        <a href="https://wa.me/972506968511" class="bg-green-500 text-white px-4 py-2 rounded-full font-bold text-sm flex items-center gap-2">
+            שלחו הודעה לאוהד
         </a>
     </header>
 
-    <section class="hero-gradient min-h-[80vh] flex flex-col items-center justify-center text-center text-white px-6 pt-20">
+    <section class="hero-gradient min-h-[70vh] flex flex-col items-center justify-center text-center text-white px-6 pt-20">
         <h1 class="text-4xl md:text-6xl font-black mb-4 leading-tight">אוהד סוכובולסקי <br><span class="text-blue-400">לרקוד בשמיים עם סחלב</span></h1>
-        <p class="text-xl md:text-2xl mb-8 max-w-2xl opacity-90">הטייס הכי קל ומנוסה בישראל (מאז 1998). חוויית אקרו-מוזיקלית מעל חופי נתניה.</p>
-        
-        <div class="flex flex-col sm:flex-row gap-4 w-full max-w-md">
-            <button onclick="scrollToSection('pricing')" class="bg-blue-600 hover:bg-blue-700 text-white text-lg font-bold py-4 px-8 rounded-xl shadow-lg transition-all transform hover:scale-105">
-                הזמינו טיסה עכשיו
-            </button>
-            <button onclick="scrollToSection('pricing')" class="bg-white/20 hover:bg-white/30 backdrop-blur text-white text-lg font-bold py-4 px-8 rounded-xl border border-white/50 transition-all">
-                קניית שובר מתנה 🎁
-            </button>
-        </div>
+        <p class="text-xl md:text-2xl mb-8 max-w-2xl opacity-90">הטייס הכי קל ומנוסה בישראל. חוויית אקרו-מוזיקלית מעל חופי נתניה.</p>
+        <button onclick="scrollToSection('pricing')" class="bg-blue-600 hover:bg-blue-700 text-white text-lg font-bold py-4 px-10 rounded-xl shadow-lg transition-all transform hover:scale-105">
+            הזמינו טיסה עכשיו
+        </button>
     </section>
 
-    <section class="py-20 px-6 max-w-4xl mx-auto text-center">
-        <h2 class="text-3xl font-bold mb-6">סחלב מצנחים בפעולה</h2>
+    <section class="py-16 px-6 max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-6 italic text-blue-600">הקצב של הרוח - ככה זה נראה:</h2>
         <div class="aspect-video bg-gray-900 rounded-3xl overflow-hidden shadow-2xl relative border-4 border-white">
-            <iframe 
-                class="absolute top-0 left-0 w-full h-full" 
-                src="https://www.youtube.com/embed/cDXCOcxrXAY?si=ohad-sahlab&rel=0" 
-                title="סחלב מצנחים - אוהד סוכובולסקי"
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                allowfullscreen>
-            </iframe>
+            <iframe class="absolute top-0 left-0 w-full h-full" 
+                src="https://www.youtube.com/embed/cDXCOcxrXAY?rel=0" 
+                frameborder="0" allowfullscreen></iframe>
         </div>
-        <p class="mt-4 text-gray-500 text-sm italic">ראו איך המוזיקה והרוח נפגשים מעל נתניה</p>
     </section>
 
-    <section id="pricing" class="py-20 px-6 max-w-5xl mx-auto text-right">
-        <h2 class="text-4xl font-black text-center mb-4 underline decoration-blue-500 underline-offset-8">מחירון עונת 2026</h2>
-        <p class="text-center text-gray-500 mb-12">בתוקף מה-1 למרץ | תמיכה ברכישת AI ישירה</p>
+    <section id="pricing" class="py-16 px-6 max-w-5xl mx-auto text-right">
+        <h2 class="text-4xl font-black text-center mb-12 underline decoration-blue-500 underline-offset-8">מחירון עונת 2026</h2>
         
         <div class="grid md:grid-cols-3 gap-6">
             <div class="bg-white p-6 rounded-3xl shadow-lg border border-gray-100 flex flex-col justify-between">
@@ -117,17 +73,17 @@
                     <p class="text-gray-600 mb-4">10 דקות באוויר</p>
                     <div class="text-3xl font-black mb-6">300₪</div>
                 </div>
-                <button onclick="processPayment('טעימה מהשמיים', 300)" class="w-full text-center bg-blue-600 text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition-colors">קנייה מהירה</button>
+                <button onclick="orderViaWhatsApp('טעימה מהשמיים', 300)" class="w-full text-center bg-blue-600 text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition-colors">הזמנה בביט / העברה</button>
             </div>
 
             <div class="bg-blue-50 p-6 rounded-3xl shadow-lg border border-blue-200 flex flex-col justify-between relative transform scale-105 z-10">
-                <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-xs py-1 px-3 rounded-full uppercase tracking-widest font-bold">פופולרי</div>
+                <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-xs py-1 px-3 rounded-full font-bold">הכי פופולרי</div>
                 <div>
                     <h3 class="text-xl font-bold mb-2 text-blue-700">החוויה המומלצת</h3>
                     <p class="text-gray-600 mb-4">15 דקות באוויר</p>
                     <div class="text-3xl font-black mb-6">400₪</div>
                 </div>
-                <button onclick="processPayment('החוויה המומלצת', 400)" class="w-full text-center bg-blue-600 text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition-colors shadow-lg">קנייה מהירה</button>
+                <button onclick="orderViaWhatsApp('החוויה המומלצת', 400)" class="w-full text-center bg-blue-600 text-white py-3 rounded-xl font-bold hover:bg-blue-700 shadow-md">הזמנה בביט / העברה</button>
             </div>
 
             <div class="bg-white p-6 rounded-3xl shadow-lg border border-gray-100 flex flex-col justify-between">
@@ -136,13 +92,8 @@
                     <p class="text-gray-600 mb-4">20 דקות באוויר</p>
                     <div class="text-3xl font-black mb-6">450₪</div>
                 </div>
-                <button onclick="processPayment('טיסה ללא גבולות', 450)" class="w-full text-center bg-blue-600 text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition-colors">קנייה מהירה</button>
+                <button onclick="orderViaWhatsApp('טיסה ללא גבולות', 450)" class="w-full text-center bg-blue-600 text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition-colors">הזמנה בביט / העברה</button>
             </div>
-        </div>
-
-        <div class="mt-8 bg-yellow-50 border-2 border-dashed border-yellow-200 p-6 rounded-3xl text-center max-w-2xl mx-auto">
-            <h4 class="text-xl font-bold text-yellow-800">רוצים מזכרת לכל החיים? 📸</h4>
-            <p class="text-yellow-700">תוספת צילום וידאו וסטילס מקצועי ב-<strong>100₪</strong> בלבד!</p>
         </div>
     </section>
 
@@ -156,36 +107,10 @@
             document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
         }
 
-        async function processPayment(itemName, price) {
-            if (!window.PaymentRequest) {
-                // גיבוי לוואטסאפ אם הדפדפן ישן
-                window.location.href = "https://wa.me/972506968511?text=" + encodeURIComponent("היי אוהד, אני רוצה להזמין " + itemName + " במחיר " + price + " שח");
-                return;
-            }
-
-            const supportedInstruments = [{
-                supportedMethods: 'https://google.com/pay',
-                data: {
-                    merchantId: 'YOUR_MERCHANT_ID',
-                    allowedPaymentMethods: ['CARD', 'TOKENIZED_CARD'],
-                }
-            }];
-
-            const details = {
-                total: {
-                    label: itemName + " - סחלב מצנחים",
-                    amount: { currency: 'ILS', value: price.toString() }
-                }
-            };
-
-            try {
-                const request = new PaymentRequest(supportedInstruments, details);
-                const response = await request.show();
-                await response.complete('success');
-                alert('התשלום עבר! נתאם את הטיסה בוואטסאפ.');
-            } catch (err) {
-                window.location.href = "https://wa.me/972506968511";
-            }
+        function orderViaWhatsApp(itemName, price) {
+            const message = `היי אוהד, אני רוצה להזמין "${itemName}" ב-${price} ש"ח. אשמח לקבל פרטים לתשלום בביט או העברה בנקאית!`;
+            const encodedMessage = encodeURIComponent(message);
+            window.location.href = `https://wa.me/972506968511?text=${encodedMessage}`;
         }
     </script>
 </body>
