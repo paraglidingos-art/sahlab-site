@@ -6,22 +6,22 @@
     <title>אוהד סחלב - מצנחי רחיפה נתניה</title>
     
     <style>
-        /* עיצוב כללי */
         body {
-            font-family: 'Segoe UI', Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f7f6;
+            background-color: #f0f2f5;
             color: #333;
+            line-height: 1.6;
         }
 
-        /* שורת טלפון בולטת למעלה */
+        /* כותרת טלפון בולטת */
         .phone-header {
             background: #ffcc00;
             color: #000;
             text-align: center;
-            padding: 20px;
-            font-size: clamp(20px, 5vw, 35px);
+            padding: 20px 10px;
+            font-size: clamp(22px, 6vw, 36px);
             font-weight: bold;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
             position: sticky;
@@ -31,34 +31,38 @@
         .phone-header a {
             text-decoration: none;
             color: #000;
+            display: block;
         }
 
-        /* פריסה של הוידאו והמידע */
-        .main-grid {
+        .main-container {
+            max-width: 1200px;
+            margin: 20px auto;
             display: grid;
             grid-template-columns: 2fr 1fr;
             gap: 20px;
-            padding: 20px;
-            max-width: 1300px;
-            margin: 0 auto;
+            padding: 0 15px;
         }
 
-        /* אזור הוידאו */
-        .video-box {
+        /* וידאו */
+        .video-wrapper {
             background: #000;
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
             position: relative;
-            aspect-ratio: 16 / 9;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
         }
-        .video-box iframe, .video-box video {
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
-            border: none;
+            border: 0;
         }
 
-        /* אזור צדדי - מפה ורוח */
+        /* כרטיסיות מידע צדדיות */
         .sidebar {
             display: flex;
             flex-direction: column;
@@ -66,24 +70,23 @@
         }
 
         .card {
-            background: white;
-            border-radius: 15px;
+            background: #fff;
             padding: 15px;
+            border-radius: 15px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            border: 1px solid #eee;
+            border-top: 5px solid #ffcc00;
         }
 
         .card h3 {
-            margin: 0 0 10px 0;
+            margin-top: 0;
             font-size: 1.2rem;
-            color: #0056b3;
-            border-bottom: 2px solid #ffcc00;
-            display: inline-block;
+            color: #222;
+            text-align: center;
         }
 
         /* התאמה למובייל */
-        @media (max-width: 900px) {
-            .main-grid {
+        @media (max-width: 850px) {
+            .main-container {
                 grid-template-columns: 1fr;
             }
             .phone-header {
@@ -98,27 +101,30 @@
         <a href="tel:0506968511">📞 אוהד סחלב: 050-6968511</a>
     </header>
 
-    <main class="main-grid">
-        <section class="video-box">
-            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Paragliding Acrobatics" allowfullscreen></iframe>
-            </section>
+    <div class="main-container">
+        
+        <section class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/H7o13fhpGaY?autoplay=1&mute=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </section>
 
         <aside class="sidebar">
+            
             <div class="card">
-                <h3>📍 נקודת המפגש: כיכר פנצ'ו</h3>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m14!1m8!1m3!1d3374.646545123456!2d34.842512!3d32.327506!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151d3f9f38100001%3A0x6331908d17c7682d!2z15vXm9eoINek16DXp915Q!5e0!3m2!1siw!2sil!4v1700000000000!5m2!1siw!2sil" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <h3>📍 נקודת המפגש: נתניה</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3376.143743585098!2d34.8415!3d32.32!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151d3f9478f7e3d1%3A0x6a0c5c3e5d3e5d3e!2sNetanya!5e0!3m2!1sen!2sil!4v1700000000000" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
 
             <div class="card">
-                <h3>🌬️ מצב הרוח בנתניה</h3>
-                <iframe src="https://www.windguru.cz/int/wgsapi.php?hostname=paraglidingos-art.github.io&id_station=76521" width="100%" height="250" frameborder="0"></iframe>
+                <h3>🌬️ מצב הרוח עכשיו</h3>
+                <iframe src="https://www.windguru.cz/int/wgsapi.php?hostname=paraglidingos-art.github.io&id_station=1214" width="100%" height="300" frameborder="0"></iframe>
             </div>
+
         </aside>
-    </main>
-
-    <div style="text-align: center; padding: 20px; font-weight: bold;">
-        <p>אוהד סחלב - טיסות חוויה ואקרובטיקה מאז 1998 🪂</p>
     </div>
+
+    <footer style="text-align: center; padding: 30px; font-size: 1.1rem;">
+        <p><strong>אוהד סחלב מצנחים</strong> - טיסות חוויה ואקרובטיקה מסעירות 🪂</p>
+    </footer>
 
 </body>
 </html>
