@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
-    <title>מצנחי רחיפה נתניה | אטרקציות בנתניה - אוהד סחלב</title>
-    <meta name="description" content="טיסות חוויה בנתניה החל מ-300 שח. אקרובטיקה, צילום לווטסאפ והנחות לקבוצות. הזמינו עכשיו עם אוהד סחלב!">
+    <title>מצנחי רחיפה נתניה | אטרקציות ומתנות יום הולדת - אוהד סחלב</title>
+    <meta name="description" content="האטרקציה המושלמת בנתניה! מתנת יום הולדת מרגשת - טיסת חוויה במצנח רחיפה. החל מ-300 שח. הזמינו עכשיו אצל אוהד סחלב">
+    <meta name="keywords" content="מצנחי רחיפה נתניה, אטרקציות בנתניה, מתנה ליום הולדת, אטרקציות בשרון, ספורט אתגרי נתניה">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700;900&display=swap" rel="stylesheet">
@@ -13,87 +14,15 @@
     <style>
         :root { --gold: #e8b84b; --sky: #0b1e3d; --white: #f5f0e8; }
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        
-        body, html { 
-            height: 100%; 
-            overflow: hidden; 
-            background: var(--sky); 
-            font-family: 'Heebo', sans-serif;
-            color: var(--white);
-        }
-
-        .main-container {
-            display: flex;
-            flex-direction: column;
-            height: 100vh;
-            padding: 8px;
-            justify-content: space-around;
-            align-items: center;
-            text-align: center;
-        }
-
+        body, html { height: 100%; overflow: hidden; background: var(--sky); font-family: 'Heebo', sans-serif; color: var(--white); }
+        .main-container { display: flex; flex-direction: column; height: 100vh; padding: 10px; justify-content: space-around; align-items: center; text-align: center; }
         header h1 { font-size: 1.6rem; color: var(--gold); line-height: 1.1; }
-        header p { font-size: 0.9rem; margin-top: 2px; }
-
-        .video-box {
-            width: 100%;
-            max-width: 450px;
-            aspect-ratio: 16/9;
-            border: 2px solid var(--gold);
-            border-radius: 8px;
-            overflow: hidden;
-            background: #000;
-        }
-
-        .pricing-table {
-            width: 100%;
-            max-width: 450px;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 5px;
-        }
-
-        .price-item {
-            background: rgba(245,240,232,0.1);
-            padding: 8px 2px;
-            border-radius: 6px;
-            border: 1px solid rgba(232,184,75,0.2);
-        }
-
-        .price-item span { display: block; font-size: 0.75rem; }
+        .price-table { width: 100%; max-width: 450px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px; }
+        .price-item { background: rgba(245,240,232,0.1); padding: 8px 2px; border-radius: 6px; border: 1px solid rgba(232,184,75,0.2); }
         .price-item b { font-size: 1.1rem; color: var(--gold); }
-
-        .extra-info {
-            background: rgba(232,184,75,0.05);
-            border: 1px dashed var(--gold);
-            padding: 8px;
-            border-radius: 8px;
-            width: 100%;
-            max-width: 450px;
-            font-size: 0.85rem;
-        }
-
-        .btn-call {
-            background: var(--gold);
-            color: var(--sky);
-            width: 100%;
-            max-width: 450px;
-            padding: 10px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 900;
-            font-size: 1.1rem;
-            display: block;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.02); }
-            100% { transform: scale(1); }
-        }
-
-        footer { font-size: 0.7rem; opacity: 0.6; }
+        .btn-call { background: var(--gold); color: var(--sky); width: 100%; max-width: 450px; padding: 12px; border-radius: 30px; text-decoration: none; font-weight: 900; font-size: 1.2rem; display: block; animation: pulse 2s infinite; }
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.02); } 100% { transform: scale(1); } }
+        .birthday-tag { color: var(--gold); font-weight: 700; font-size: 0.9rem; border: 1px solid var(--gold); padding: 4px 10px; border-radius: 15px; margin-top: 5px; }
     </style>
 </head>
 <body>
@@ -101,39 +30,28 @@
     <div class="main-container">
         <header>
             <h1>מצנחי רחיפה נתניה</h1>
-            <p>חוויה בשמיים עם אוהד סחלב (מטיס מ-1998)</p>
+            <div class="birthday-tag">המתנה המושלמת ליום הולדת 🎁</div>
         </header>
 
-        <div class="video-box">
-            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/S2C_mJp5ZkU?autoplay=1&mute=1&loop=1&playlist=S2C_mJp5ZkU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <div style="width:100%; max-width:450px; background:#000; aspect-ratio:16/9; border:2px solid var(--gold); border-radius:8px;">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/S2C_mJp5ZkU" frameborder="0" allowfullscreen></iframe>
         </div>
 
-        <div class="pricing-table">
-            <div class="price-item">
-                <span>10 דקות</span>
-                <b>₪300</b>
-            </div>
-            <div class="price-item">
-                <span>15 דקות</span>
-                <b>₪400</b>
-            </div>
-            <div class="price-item">
-                <span>20 דקות</span>
-                <b>₪450</b>
-            </div>
+        <div class="price-table">
+            <div class="price-item"><span>10 דק'</span><br><b>₪300</b></div>
+            <div class="price-item"><span>15 דק'</span><br><b>₪400</b></div>
+            <div class="price-item"><span>20 דק'</span><br><b>₪450</b></div>
         </div>
 
-        <div class="extra-info">
-            <p>📸 צילום מקצועי: <b>₪100</b> (יישלח ישירות לווטסאפ)</p>
-            <p style="margin-top:4px; color:var(--gold);">🔥 <b>הנחה מיוחדת לקבוצות (4+)</b></p>
+        <div style="font-size: 0.85rem; background:rgba(232,184,75,0.1); padding:10px; border-radius:8px; width:100%; max-width:450px;">
+            <p>📸 צילום מקצועי לווטסאפ: <b>₪100</b></p>
+            <p>👥 <b>הנחה מיוחדת לקבוצות (4 משתתפים ומעלה)</b></p>
         </div>
 
-        <div style="width: 100%; max-width: 450px;">
-            <a href="tel:0506968511" class="btn-call">הזמינו טיסה: 050-696-8511</a>
-        </div>
+        <a href="tel:0506968511" class="btn-call">הזמינו טיסה: 050-696-8511</a>
 
-        <footer>
-            נתניה, ליד כיכר פנצ'ו | בטיחות ללא פשרות
+        <footer style="font-size: 0.7rem; opacity: 0.6;">
+            מטיס מוסמך מ-1998 | אטרקציות בנתניה - כיכר פנצ'ו
         </footer>
     </div>
 
