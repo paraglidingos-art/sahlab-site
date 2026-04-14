@@ -5,27 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>אוהד סחלב - מצנחי רחיפה בנתניה | טיסות חוויה ואקרובטיקה</title>
-  <meta name="description" content="טוסו עם אוהד סחלב, טייס מצנח רחיפה מנוסה מ-1998. טיסות חוויה בנתניה, אקרובטיקה מסעירה עם מוזיקה וצילום. רקורד בטיחות נקי. הזמינו טיסה: 050-696-8511" />
-  <meta name="keywords" content="מצנחי רחיפה נתניה, רחיפה בנתניה, אטרקציות בנתניה, טיסת חוויה במצנח, אוהד סחלב, ספורט אתגרי, אקרובטיקה אווירית" />
-  <meta name="author" content="אוהד סחלב" />
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SportsActivityLocation",
-    "name": "אוהד סחלב - מצנחי רחיפה נתניה",
-    "description": "טיסות חוויה ואקרובטיקה במצנחי רחיפה מעל חופי נתניה.",
-    "image": "https://paraglidingos-art.github.io/sahlab-site/hero-bg.jpg", 
-    "telephone": "050-696-8511",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "נתניה",
-      "addressCountry": "IL"
-    },
-    "url": "https://paraglidingos-art.github.io/sahlab-site/"
-  }
-  </script>
-
+  <meta name="description" content="טוסו עם אוהד סחלב בנתניה. טיסות חוויה, אקרובטיקה והנחות מיוחדות לקבוצות! מטיס מ-1998 עם רקורד בטיחות מושלם. הזמינו עכשיו: 050-696-8511" />
+  
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Heebo:wght@300;400;600&display=swap" rel="stylesheet" />
   
@@ -34,26 +15,21 @@
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
     html{scroll-behavior:smooth;}
     body{background:var(--sky);color:var(--white);font-family:'Heebo',sans-serif;font-weight:300;overflow-x:hidden;}
-    #sky-canvas{position:fixed;inset:0;z-index:0;pointer-events:none;}
-    body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:1;opacity:0.35;}
     .page{position:relative;z-index:2;}
-
-    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1rem 2.5rem;background:linear-gradient(to bottom,rgba(11,30,61,0.96),transparent);backdrop-filter:blur(4px);gap:0.8rem;}
-    .nav-logo{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--gold);text-decoration:none;flex-shrink:0;}
-    .nav-right{display:flex;align-items:center;gap:0.7rem;flex-wrap:wrap;justify-content:flex-end;}
-    .weather-badge{display:flex;align-items:center;gap:0.5rem;background:rgba(232,184,75,0.1);border:1px solid rgba(232,184,75,0.3);padding:0.38rem 0.9rem;border-radius:2rem;font-size:0.83rem;color:var(--gold);cursor:pointer;transition:background 0.3s;white-space:nowrap;}
-    .weather-badge:hover{background:rgba(232,184,75,0.18);}
-    .weather-badge .temp{font-weight:600;}
-    .wind-badge{display:flex;align-items:center;gap:0.45rem;background:rgba(100,180,255,0.08);border:1px solid rgba(100,180,255,0.25);padding:0.38rem 0.9rem;border-radius:2rem;font-size:0.83rem;color:#8ecfff;cursor:pointer;transition:background 0.3s;white-space:nowrap;}
-    .wind-badge:hover{background:rgba(100,180,255,0.15);}
-    .wind-arrow{display:inline-block;font-size:1rem;transition:transform 0.8s ease;}
-    .nav-phone{color:var(--white);text-decoration:none;font-size:0.9rem;border:1px solid rgba(232,184,75,0.4);padding:0.38rem 1.1rem;border-radius:2rem;transition:background 0.3s;white-space:nowrap;}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1rem 2.5rem;background:linear-gradient(to bottom,rgba(11,30,61,0.96),transparent);backdrop-filter:blur(4px);}
+    .nav-logo{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--gold);text-decoration:none;}
+    .nav-phone{color:var(--white);text-decoration:none;font-size:0.9rem;border:1px solid rgba(232,184,75,0.4);padding:0.38rem 1.1rem;border-radius:2rem;transition:0.3s;}
     .nav-phone:hover{background:rgba(232,184,75,0.15);border-color:var(--gold);}
-
-    /* (שאר ה-CSS שלך נשאר זהה...) */
-    .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:6rem 2rem 4rem;position:relative;}
-    .hero h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; color: var(--gold); margin-bottom: 1rem; }
-    .hero p { font-size: 1.2rem; max-width: 600px; margin-bottom: 2rem; }
+    
+    .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:2rem;}
+    h1{font-family:'Playfair Display',serif;font-size:3.5rem;color:var(--gold);margin-bottom:1rem;line-height:1.1;}
+    .hero p{font-size:1.2rem;max-width:700px;margin-bottom:2rem;}
+    
+    .pricing-grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));gap:1.5rem;padding:2rem;max-width:1000px;margin:0 auto;}
+    .price-card{background:rgba(245,240,232,0.05);border:1px solid rgba(232,184,75,0.2);padding:2rem;border-radius:1rem;text-align:center;}
+    .price-card.special{border-color:var(--gold);background:rgba(232,184,75,0.1);}
+    .price-val{font-size:2.5rem;color:var(--gold);font-weight:700;margin:1rem 0;}
+    .cta-btn{display:inline-block;background:var(--gold);color:var(--sky);padding:0.8rem 2rem;border-radius:2rem;text-decoration:none;font-weight:600;margin-top:1rem;}
   </style>
 </head>
 <body>
@@ -61,21 +37,39 @@
   <div class="page">
     <nav>
       <a href="#" class="nav-logo">אוהד סחלב</a>
-      <div class="nav-right">
-        <div class="weather-badge">🌤️ <span class="temp">24°C</span></div>
-        <a href="tel:0506968511" class="nav-phone">📞 050-696-8511</a>
-      </div>
+      <a href="tel:0506968511" class="nav-phone">📞 050-696-8511</a>
     </nav>
 
-    <header class="hero">
-      <h1>אוהד סחלב – מצנחי רחיפה נתניה</h1>
-      <p>חוויה בלתי נשכחת של חופש בשמיים. טיסות חוויה, אקרובטיקה והדרכה עם הטייס המנוסה בישראל.</p>
-      <div class="cta-group">
-        <a href="https://wa.me/972506968511" class="nav-phone" style="background:var(--gold); color:var(--sky); font-weight:600;">קבע טיסה עכשיו</a>
-      </div>
-    </header>
+    <section class="hero">
+      <h1>מצנחי רחיפה נתניה<br>טיסות חוויה</h1>
+      <p>טיסות חוויה ואקרובטיקה מסעירות עם אוהד סחלב – טייס מנוסה ומורה מוסמך מ-1998. בואו לראות את נתניה מהזווית הכי יפה שיש.</p>
+      <a href="#pricing" class="cta-btn">ראה מחירים והזמן</a>
+    </section>
 
-    </div>
+    <section id="pricing">
+      <h2 style="text-align:center; color:var(--gold); font-family:'Playfair Display'; font-size:2rem;">החבילות שלנו</h2>
+      <div class="pricing-grid">
+        <div class="price-card">
+          <h3>טיסת חוויה</h3>
+          <p>15-20 דקות בשמיים</p>
+          <div class="price-val">₪400</div>
+          <p>כולל אופציה לאקרובטיקה</p>
+        </div>
+        
+        <div class="price-card special">
+          <h3>קבוצות ואירועים</h3>
+          <p>4 משתתפים ומעלה</p>
+          <div class="price-val">הנחה מיוחדת</div>
+          <p>צרו קשר לקבלת הצעת מחיר קבוצתית משתלמת!</p>
+          <a href="https://wa.me/972506968511" class="cta-btn">בוואטסאפ</a>
+        </div>
+      </div>
+    </section>
+
+    <footer style="text-align:center; padding:4rem 2rem; color:rgba(245,240,232,0.5);">
+      <p>© 2026 אוהד סחלב | מצנחי רחיפה נתניה | 050-696-8511</p>
+    </footer>
+  </div>
 
 </body>
 </html>
