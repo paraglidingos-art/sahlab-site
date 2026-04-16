@@ -12,57 +12,103 @@
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; text-align: center; background-color: #f0f8ff; color: #333; }
         
-        /* עיצוב הווטסאפ והטלפון למעלה */
-        .top-contact { background: #25d366; color: white; padding: 15px; font-size: 24px; font-weight: bold; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
-        .top-contact a { color: white; text-decoration: none; }
+        /* סרגל צור קשר עליון בולט */
+        .top-contact { 
+            background: #25d366; 
+            color: white; 
+            padding: 15px; 
+            font-size: 26px; 
+            font-weight: bold; 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2); 
+        }
+        .top-contact a { color: white; text-decoration: none; display: block; }
 
         header { padding: 40px 20px; background: #fff; }
-        h1 { color: #0077b6; font-size: 2.5em; margin-bottom: 10px; }
+        h1 { color: #0077b6; font-size: 2.8em; margin: 0; }
+        .sub-title { font-size: 1.2em; color: #555; margin-top: 10px; }
         
-        .media-container { max-width: 800px; margin: 20px auto; padding: 10px; }
+        .media-container { max-width: 800px; margin: 20px auto; padding: 15px; }
         img, video { width: 100%; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-bottom: 20px; }
 
-        .pricing { background: #fff; padding: 20px; border-radius: 15px; display: inline-block; margin: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
-        .pricing ul { list-style: none; padding: 0; font-size: 1.2em; }
-        .pricing li { margin: 10px 0; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        .pricing-card { 
+            background: white; 
+            padding: 25px; 
+            border-radius: 20px; 
+            display: inline-block; 
+            margin: 20px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+            border: 2px solid #0077b6;
+        }
+        .pricing-card h3 { color: #0077b6; font-size: 1.8em; margin-top: 0; }
+        .pricing-card ul { list-style: none; padding: 0; font-size: 1.3em; }
+        .pricing-card li { margin: 15px 0; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        .price-tag { font-weight: bold; color: #d90429; }
         
-        .cta-button { display: inline-block; background: #25d366; color: white; padding: 15px 30px; font-size: 1.2em; border-radius: 50px; text-decoration: none; font-weight: bold; margin-top: 20px; }
+        .photo-option { 
+            background: #fff3cd; 
+            padding: 10px; 
+            border-radius: 10px; 
+            font-weight: bold; 
+            color: #856404;
+            margin-top: 10px;
+        }
+
+        .cta-button { 
+            display: inline-block; 
+            background: #25d366; 
+            color: white; 
+            padding: 20px 40px; 
+            font-size: 1.5em; 
+            border-radius: 50px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            margin: 30px 0;
+            transition: transform 0.2s;
+        }
+        .cta-button:hover { transform: scale(1.05); }
     </style>
 </head>
 <body>
 
     <div class="top-contact">
-        דברו איתי בווטסאפ: <a href="https://wa.me/972506968511">050-6968511</a> 📱
+        <a href="https://wa.me/972506968511">הזמינו טיסה בווטסאפ: 050-6968511 📱</a>
     </div>
 
     <header>
         <h1>סחלב מצנחי רחיפה נתניה</h1>
-        <p>טיסות חוויה ואקרובטיקה עם אוהד | טייס מנוסה משנת 1998</p>
+        <div class="sub-title">חוויית טיסה, אקרובטיקה ומוזיקה עם אוהד | טייס מנוסה משנת 1998</div>
     </header>
 
     <div class="media-container">
-        <img src="קישור_לתמונה_שלך.jpg" alt="סחלב מצנחי רחיפה נתניה">
+        <img src="assets/img/hero-bg.jpg" alt="סחלב מצנחי רחיפה נתניה" onerror="this.src='https://via.placeholder.com/800x450?text=סחלב+מצנחי+רחיפה'">
         
-        <video controls>
-            <source src="קישור_לסרטון_שלך.mp4" type="video/mp4">
+        <video controls poster="assets/img/video-poster.jpg">
+            <source src="assets/video/flight.mp4" type="video/mp4">
             הדפדפן שלך לא תומך בנגן הווידאו.
         </video>
     </div>
 
-    <div class="pricing">
-        <h3>מחירון טיסות חוויה:</h3>
+    <div class="pricing-card">
+        <h3>מחירון טיסות:</h3>
         <ul>
-            <li><strong>10 דקות</strong> - 300 ש"ח</li>
-            <li><strong>15 דקות</strong> - 400 ש"ח</li>
-            <li><strong>20 דקות</strong> - 450 ש"ח</li>
+            <li>10 דקות טיסה: <span class="price-tag">300 ש"ח</span></li>
+            <li>15 דקות טיסה: <span class="price-tag">400 ש"ח</span></li>
+            <li>20 דקות טיסה: <span class="price-tag">450 ש"ח</span></li>
         </ul>
-        <p>*הטיסות כוללות אופציה לאקרובטיקה ומוזיקה</p>
+        <div class="photo-option">📸 תוספת צילום וידאו ותמונות: 100 ש"ח</div>
     </div>
 
-    <div style="padding: 30px;">
-        <a href="https://wa.me/972506968511" class="cta-button">להזמנת טיסה עכשיו</a>
-        <p>נתניה, ליד כיכר פנצ'ו</p>
+    <div>
+        <a href="https://wa.me/972506968511" class="cta-button">לחצו כאן להזמנה מהירה</a>
+        <p style="font-size: 1.2em;">📍 מיקום: נתניה, ליד כיכר פנצ'ו</p>
     </div>
+
+    <footer style="padding: 20px; color: #888; font-size: 0.9em;">
+        &copy; 2026 סחלב מצנחי רחיפה - אוהד סחלב סוקובלסקי
+    </footer>
 
 </body>
 </html>
