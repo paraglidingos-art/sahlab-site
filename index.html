@@ -4,28 +4,566 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <!-- SEO בסיסי - כותרת ותיאור שיופיעו בגוגל -->
-  <title>מצנח רחיפה נתניה | טיסות חוויה ואקרובטיקה - אוהד סחלב</title>
-  <meta name="description" content="מחפשים מצנח רחיפה בנתניה? טוסו עם אוהד סחלב, טייס מנוסה משנת 1998, לחוויית טיסת טנדם בלתי נשכחת, אקרובטיקה למוזיקה מעל מצוקי נתניה (כיכר פנצ'ו). לפרטים: 050-6968511">
-  <meta name="keywords" content="מצנח רחיפה נתניה, רחיפה בנתניה, טיסת חוויה, מצנחי רחיפה, טנדם, אוהד סחלב, SOHOY, אקרובטיקה, כיכר פנצ'ו">
-  
-  <!-- תגיות שיתוף לפייסבוק ו-WhatsApp (Open Graph) -->
-  <meta property="og:title" content="מצנח רחיפה נתניה | טיסות חוויה ואקרובטיקה - אוהד סחלב">
-  <meta property="og:description" content="טיסות טנדם חוויה ואקרובטיקה לפי קצב המוזיקה מעל מצוקי נתניה עם הטייס המנוסה בישראל.">
-  <meta property="og:url" content="https://paraglidingos-art.github.io/sahlab-site/">
+  <!-- SEO Meta Tags -->
+  <title>אוהד סחלב | מצנחי רחיפה נתניה – טיסות חוויה ואקרובטיקה</title>
+  <meta name="description" content="טיסות חוויה במצנח רחיפה מעל מצוקי נתניה עם אוהד סחלב. טייס מנוסה משנת 1998. אקרובטיקה, מוזיקה ונוף מרהיב. הזמינו עכשיו: 050-6968511">
+  <meta name="keywords" content="מצנחי רחיפה נתניה, טיסת חוויה נתניה, paragliding netanya, אוהד סחלב, מצנח רחיפה, טיסה נתניה, אקרובטיקה, SOHOY">
+  <meta name="author" content="אוהד סחלב">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://paraglidingos-art.github.io/sahlab-site/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="אוהד סחלב | מצנחי רחיפה נתניה">
+  <meta property="og:description" content="טיסות חוויה ואקרובטיקה מעל מצוקי נתניה. טייס מנוסה משנת 1998. 050-6968511">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://paraglidingos-art.github.io/sahlab-site/">
+  <meta property="og:locale" content="he_IL">
 
-  <link href="https://paraglidingos-art.github.io/sahlab-site/" rel="canonical">
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "אוהד סחלב – מצנחי רחיפה נתניה",
+    "description": "טיסות חוויה ואקרובטיקה במצנח רחיפה מעל מצוקי נתניה",
+    "telephone": "+972506968511",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "כיכר פנצ'ו",
+      "addressLocality": "נתניה",
+      "addressCountry": "IL"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 32.3215,
+      "longitude": 34.8532
+    },
+    "url": "https://paraglidingos-art.github.io/sahlab-site/",
+    "priceRange": "₪₪",
+    "openingHours": "Mo-Su 08:00-19:00",
+    "sameAs": [
+      "https://www.youtube.com/@paraglidingos-art"
+    ]
+  }
+  </script>
 
-  <!-- פונטים ועיצוב -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link rel="stylesheet" href="style.css"> <!-- ודא ששם קובץ ה-CSS שלך מתאים -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --sky: #0a1628;
+      --sky-mid: #0e2a4a;
+      --sky-light: #1a4a7a;
+      --gold: #f5c842;
+      --gold-dark: #c9a020;
+      --white: #f0f4ff;
+      --grey: #8899bb;
+      --danger: #ff4d4d;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--sky);
+      color: var(--white);
+      font-family: 'Heebo', sans-serif;
+      direction: rtl;
+      overflow-x: hidden;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: 
+        radial-gradient(ellipse 80% 50% at 50% 0%, #1a5fa8 0%, transparent 60%),
+        radial-gradient(ellipse 60% 40% at 80% 80%, #0e2a4a 0%, transparent 50%),
+        linear-gradient(180deg, #0a1628 0%, #0d2040 40%, #0a1628 100%);
+      z-index: 0;
+    }
+
+    /* animated clouds/wind lines */
+    .wind-lines {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      z-index: 0;
+      pointer-events: none;
+    }
+    .wl {
+      position: absolute;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(245,200,66,0.3), transparent);
+      animation: windMove 4s linear infinite;
+      opacity: 0;
+    }
+    .wl:nth-child(1)  { top: 15%; width: 40%; animation-delay: 0s;   animation-duration: 3.5s; }
+    .wl:nth-child(2)  { top: 28%; width: 25%; animation-delay: 0.8s; animation-duration: 4s; }
+    .wl:nth-child(3)  { top: 42%; width: 55%; animation-delay: 1.5s; animation-duration: 3s; }
+    .wl:nth-child(4)  { top: 60%; width: 30%; animation-delay: 2.2s; animation-duration: 4.5s; }
+    .wl:nth-child(5)  { top: 75%; width: 45%; animation-delay: 0.5s; animation-duration: 3.8s; }
+    @keyframes windMove {
+      0%   { right: -60%; opacity: 0; }
+      20%  { opacity: 1; }
+      80%  { opacity: 0.6; }
+      100% { right: 110%; opacity: 0; }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 2rem;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(245,200,66,0.15);
+      border: 1px solid rgba(245,200,66,0.4);
+      color: var(--gold);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      padding: 0.4rem 1.2rem;
+      border-radius: 50px;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      animation: fadeDown 1s ease both;
+    }
+
+    .hero h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(3.5rem, 12vw, 9rem);
+      line-height: 0.9;
+      letter-spacing: 2px;
+      color: var(--white);
+      animation: fadeDown 1s ease 0.2s both;
+    }
+    .hero h1 span { color: var(--gold); }
+
+    .hero-sub {
+      font-size: clamp(1rem, 2.5vw, 1.4rem);
+      color: var(--grey);
+      margin-top: 1.2rem;
+      font-weight: 300;
+      animation: fadeDown 1s ease 0.4s both;
+    }
+
+    .hero-cta {
+      margin-top: 2.5rem;
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      animation: fadeDown 1s ease 0.6s both;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: var(--sky);
+      font-family: 'Heebo', sans-serif;
+      font-weight: 900;
+      font-size: 1.1rem;
+      padding: 0.9rem 2.2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(245,200,66,0.4);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--white);
+      font-family: 'Heebo', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 0.9rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.3);
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .btn-secondary:hover {
+      border-color: var(--gold);
+      background: rgba(245,200,66,0.08);
+    }
+
+    .scroll-hint {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--grey);
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      animation: bounce 2s ease infinite;
+    }
+    .scroll-hint::after {
+      content: '↓';
+      font-size: 1.2rem;
+      color: var(--gold);
+    }
+    @keyframes bounce {
+      0%,100% { transform: translateX(-50%) translateY(0); }
+      50%      { transform: translateX(-50%) translateY(6px); }
+    }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== NAV ===== */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(10,22,40,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(245,200,66,0.1);
+    }
+    .nav-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.6rem;
+      color: var(--gold);
+      letter-spacing: 2px;
+      text-decoration: none;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--grey);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+
+    /* ===== SECTIONS ===== */
+    section {
+      padding: 5rem 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 0.75rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.8rem;
+      font-weight: 700;
+    }
+
+    .section-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      line-height: 1;
+      color: var(--white);
+      margin-bottom: 1.5rem;
+    }
+
+    .section-desc {
+      color: var(--grey);
+      font-size: 1.05rem;
+      line-height: 1.8;
+      max-width: 650px;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid rgba(245,200,66,0.15);
+      margin: 0;
+    }
+
+    /* ===== PRICES ===== */
+    .prices-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .price-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      transition: transform 0.3s, border-color 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .price-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .price-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(245,200,66,0.3);
+    }
+    .price-card:hover::before { opacity: 1; }
+
+    .price-card.featured {
+      border-color: rgba(245,200,66,0.4);
+      background: rgba(245,200,66,0.06);
+    }
+    .price-card.featured::before { opacity: 1; }
+    .featured-badge {
+      position: absolute;
+      top: 0.8rem; left: 1rem;
+      background: var(--gold);
+      color: var(--sky);
+      font-size: 0.65rem;
+      font-weight: 900;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      letter-spacing: 1px;
+    }
+
+    .price-minutes {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3rem;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .price-label { color: var(--grey); font-size: 0.85rem; margin-bottom: 1rem; }
+    .price-amount {
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--white);
+    }
+    .price-amount span { font-size: 1rem; color: var(--grey); font-weight: 300; }
+
+    .price-addon {
+      background: rgba(245,200,66,0.08);
+      border: 1px dashed rgba(245,200,66,0.3);
+      border-radius: 12px;
+      padding: 1.2rem 1.5rem;
+      margin-top: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .price-addon-icon { font-size: 2rem; }
+    .price-addon-text strong { display: block; color: var(--gold); font-size: 0.9rem; }
+    .price-addon-text span { color: var(--grey); font-size: 0.85rem; }
+
+    /* ===== VIDEOS ===== */
+    .videos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .video-wrapper {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: #000;
+      position: relative;
+      aspect-ratio: 9/16;
+      transition: transform 0.3s, border-color 0.3s;
+    }
+    .video-wrapper:hover {
+      transform: scale(1.02);
+      border-color: rgba(245,200,66,0.4);
+    }
+    .video-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* ===== WINDGURU ===== */
+    .windguru-section {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 24px;
+      padding: 2.5rem;
+      margin-top: 3rem;
+    }
+
+    .windguru-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .wind-icon {
+      font-size: 2.5rem;
+      animation: spin 4s linear infinite;
+    }
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+
+    .wind-status {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+    }
+
+    .wind-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.4rem 1rem;
+      border-radius: 50px;
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+    .wind-pill.good  { background: rgba(50,200,100,0.15); border: 1px solid rgba(50,200,100,0.4); color: #50c878; }
+    .wind-pill.warn  { background: rgba(255,180,0,0.15);  border: 1px solid rgba(255,180,0,0.4);  color: #ffb400; }
+    .wind-pill.bad   { background: rgba(255,77,77,0.15);  border: 1px solid rgba(255,77,77,0.4);  color: #ff4d4d; }
+
+    .windguru-embed {
+      width: 100%;
+      overflow-x: auto;
+      border-radius: 12px;
+      background: #fff;
+    }
+    .windguru-embed iframe {
+      width: 100%;
+      min-height: 420px;
+      border: none;
+      border-radius: 12px;
+      display: block;
+    }
+
+    .wind-legend {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .wind-legend-item {
+      background: rgba(255,255,255,0.04);
+      border-radius: 10px;
+      padding: 1rem;
+      border-right: 3px solid var(--gold);
+    }
+    .wind-legend-item strong {
+      display: block;
+      color: var(--gold);
+      font-size: 0.85rem;
+      margin-bottom: 0.3rem;
+    }
+    .wind-legend-item span { color: var(--grey); font-size: 0.82rem; line-height: 1.5; }
+
+    /* ===== WHY ===== */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .why-card {
+      padding: 1.8rem;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    .why-icon { font-size: 2.2rem; margin-bottom: 1rem; }
+    .why-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .why-card p  { color: var(--grey); font-size: 0.9rem; line-height: 1.7; }
+
+    /* ===== CTA SECTION ===== */
+    .cta-section {
+      text-align: center;
+      padding: 5rem 2rem;
+      background: linear-gradient(180deg, transparent, rgba(245,200,66,0.04), transparent);
+      border-top: 1px solid rgba(245,200,66,0.1);
+      border-bottom: 1px solid rgba(245,200,66,0.1);
+    }
+    .cta-section h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2rem, 6vw, 4rem);
+      margin-bottom: 1rem;
+    }
+    .cta-section p { color: var(--grey); margin-bottom: 2rem; }
+    .phone-big {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      color: var(--gold);
+      letter-spacing: 3px;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 2rem;
+      transition: opacity 0.2s;
+    }
+    .phone-big:hover { opacity: 0.8; }
+
+    /* ===== FOOTER ===== */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--grey);
+      font-size: 0.8rem;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    footer a { color: var(--gold); text-decoration: none; }
+
+    /* ===== MOBILE ===== */
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      section { padding: 3.5rem 1.2rem; }
+      .windguru-section { padding: 1.5rem 1rem; }
+    }
+  </style>
 </head>
 <body>
 
+<!-- NAV -->
 <nav>
-  <a href="#">SOHOY ✈</a>
-  <ul>
+  <a href="#" class="nav-logo">SOHOY ✈</a>
+  <ul class="nav-links">
     <li><a href="#prices">מחירים</a></li>
     <li><a href="#videos">סרטונים</a></li>
     <li><a href="#wind">תחזית רוח</a></li>
@@ -33,116 +571,137 @@
   </ul>
 </nav>
 
-<header class="hero">
-  <div></div>
-  <div>
-    <div></div><div></div><div></div>
-    <div></div><div></div>
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="wind-lines">
+    <div class="wl"></div><div class="wl"></div><div class="wl"></div>
+    <div class="wl"></div><div class="wl"></div>
   </div>
   <div class="hero-content">
-    <div>🪂 מצנח רחיפה נתניה · טייס מנוסה משנת 1998</div>
+    <div class="hero-badge">🪂 נתניה · טייס מנוסה משנת 1998</div>
     <h1>אוהד<br><span>סחלב</span></h1>
-    <h2>טיסות חוויה · אקרובטיקה · מוזיקה מעל מצוקי נתניה</h2>
-    <div class="hero-buttons">
-      <a href="https://wa.me/972506968511?text=היי%20אוהד,%20אשמח%20לפרטים%20על%20טיסת%20מצנח%20רחיפה" class="btn-whatsapp">
-        📱 הזמן בוואטסאפ
+    <p class="hero-sub">טיסות חוויה · אקרובטיקה · מוזיקה מעל מצוקי נתניה</p>
+    <div class="hero-cta">
+      <a href="https://wa.me/972506968511?text=היי%20אוהד,%20אשמח%20לפרטים%20על%20טיסת%20מצנח%20רחיפה" class="btn-primary">
+        📱 הזמן בווטסאפ
       </a>
       <a href="#videos" class="btn-secondary">צפה בסרטונים ↓</a>
     </div>
   </div>
-  <div>גלול למטה</div>
-</header>
+  <div class="scroll-hint">גלול למטה</div>
+</div>
 
+<!-- PRICES -->
 <section id="prices">
-  <div>מחירון טיסות</div>
-  <h2>בחר את חוויית הרחיפה שלך בנתניה</h2>
-  <p>כל הטיסות כוללות אקרובטיקה לפי קצב המוזיקה, מיקום: ליד כיכר פנצ'ו נתניה.</p>
+  <div class="section-label">מחירון טיסות</div>
+  <h2 class="section-title">בחר את החוויה שלך</h2>
+  <p class="section-desc">כל הטיסות כוללות אקרובטיקה לפי קצב המוזיקה, מיקום: ליד כיכר פנצ'ו נתניה.</p>
 
-  <div class="price-cards">
-    <div class="card">
-      <div>10</div>
-      <div>דקות טיסה</div>
-      <div>300 <span>₪</span></div>
+  <div class="prices-grid">
+    <div class="price-card">
+      <div class="price-minutes">10</div>
+      <div class="price-label">דקות טיסה</div>
+      <div class="price-amount">300 <span>₪</span></div>
     </div>
-    <div class="card popular">
-      <div>פופולרי</div>
-      <div>15</div>
-      <div>דקות טיסה</div>
-      <div>400 <span>₪</span></div>
+    <div class="price-card featured">
+      <div class="featured-badge">פופולרי</div>
+      <div class="price-minutes">15</div>
+      <div class="price-label">דקות טיסה</div>
+      <div class="price-amount">400 <span>₪</span></div>
     </div>
-    <div class="card">
-      <div>20</div>
-      <div>דקות טיסה</div>
-      <div>450 <span>₪</span></div>
+    <div class="price-card">
+      <div class="price-minutes">20</div>
+      <div class="price-label">דקות טיסה</div>
+      <div class="price-amount">450 <span>₪</span></div>
     </div>
   </div>
 
-  <div class="addon">
-    <div>📸</div>
-    <div>
+  <div class="price-addon">
+    <div class="price-addon-icon">📸</div>
+    <div class="price-addon-text">
       <strong>תוספת צילום וידאו + תמונות</strong>
       <span>+100 ₪ — תוכן מקצועי לזיכרון ולרשתות</span>
     </div>
   </div>
 </section>
 
-<hr>
+<hr class="divider">
 
+<!-- VIDEOS -->
 <section id="videos">
-  <div>סרטונים אמיתיים</div>
-  <h2>מצנחי רחיפה נתניה - תראה לפני שתטוס</h2>
-  <p>אקרובטיקה אמיתית, מוזיקה אמיתית, נוף מרהיב של חופי נתניה. זה מה שמחכה לך.</p>
+  <div class="section-label">סרטונים אמיתיים</div>
+  <h2 class="section-title">תראה לפני שתטוס</h2>
+  <p class="section-desc">אקרובטיקה אמיתית, מוזיקה אמיתית, נוף מרהיב של חופי נתניה. זה מה שמחכה לך.</p>
 
-  <div class="video-grid">
-    <div>
-      <!-- כאן נכנסים הסרטונים שלך -->
+  <div class="videos-grid">
+    <div class="video-wrapper">
+      <iframe
+        src="https://www.youtube.com/embed/1Y9lR_XrpgY"
+        title="אוהד סחלב - מצנח רחיפה נתניה אקרובטיקה"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        loading="lazy">
+      </iframe>
     </div>
-    <div>
-      <!-- כאן נכנסים הסרטונים שלך -->
+    <div class="video-wrapper">
+      <iframe
+        src="https://www.youtube.com/embed/uziPbOb_Bwg"
+        title="אוהד סחלב - טיסת חוויה נתניה SOHOY"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        loading="lazy">
+      </iframe>
     </div>
   </div>
 </section>
 
-<hr>
+<hr class="divider">
 
-<section id="wind">
-  <div>תחזית מזג אוויר</div>
-  <h2>רוח ומזג אוויר בנתניה – עכשיו לרחיפה</h2>
-  <p>הרחיפה תלויה ברוח. בדוק לפני שאתה מגיע — תחזית Windguru בזמן אמת לנתניה.</p>
+<!-- WINDGURU -->
+<section id="wind" style="max-width:1100px">
+  <div class="section-label">תחזית מזג אוויר</div>
+  <h2 class="section-title">רוח בנתניה – עכשיו</h2>
+  <p class="section-desc">הרחיפה תלויה ברוח. בדוק לפני שאתה מגיע — תחזית Windguru בזמן אמת לנתניה.</p>
 
-  <div class="weather-info">
-    <div>
-      <div>🌬️</div>
+  <div class="windguru-section">
+    <div class="windguru-header">
+      <div class="wind-icon">🌬️</div>
       <div>
-        <strong>Windguru – נתניה (חוף)</strong><br>
-        <span>תחנת מדידה: Netanya Beach | עודכן בזמן אמת</span>
+        <strong style="font-size:1.1rem;">Windguru – נתניה (חוף)</strong><br>
+        <span style="color:var(--grey); font-size:0.85rem;">תחנת מדידה: Netanya Beach | עודכן בזמן אמת</span>
       </div>
     </div>
 
     <div class="wind-status">
-      <div>✅ 15–25 קמ"ש – אידיאלי לרחיפה</div>
-      <div>⚠️ 10–14 קמ"ש – גבולי</div>
-      <div>⛔ מתחת ל-10 / מעל 35 – לא יוצאים</div>
+      <div class="wind-pill good">✅ 15–25 קמ"ש – אידיאלי לרחיפה</div>
+      <div class="wind-pill warn">⚠️ 10–14 קמ"ש – גבולי</div>
+      <div class="wind-pill bad">⛔ מתחת ל-10 / מעל 35 – לא יוצאים</div>
     </div>
 
-    <div>
-      <!-- ווידג'ט ווינדגורו במידה ויש -->
+    <div class="windguru-embed">
+      <iframe
+        src="https://www.windguru.cz/int/index.php?sc=64&uid=wg_fwdtable&t=table&s=64&m=swind&r=3&d=0&f=0&lang=he"
+        title="Windguru נתניה תחזית רוח"
+        loading="lazy"
+        scrolling="auto">
+      </iframe>
     </div>
 
-    <div class="weather-tips">
-      <div>
+    <div class="wind-legend">
+      <div class="wind-legend-item">
         <strong>🧭 כיוון אידיאלי</strong>
         <span>רוח מערבית (W) עד דרום-מערבית (SW). הכי טוב לרחיפה לאורך המצוק.</span>
       </div>
-      <div>
+      <div class="wind-legend-item">
         <strong>💨 עוצמה מומלצת</strong>
         <span>15–28 קמ"ש. מעל 35 קמ"ש הטיסה מבוטלת לבטיחות הנוסע.</span>
       </div>
-      <div>
+      <div class="wind-legend-item">
         <strong>📅 עונת שיא</strong>
         <span>אפריל–ספטמבר. בקיץ יש רוח ים קבועה אחר הצהריים – הזמן הטוב ביותר.</span>
       </div>
-      <div>
+      <div class="wind-legend-item">
         <strong>📞 אישור לפני הגעה</strong>
         <span>תמיד תאשר עם אוהד ביום הטיסה. הוא יעדכן אם יש שינוי במזג האוויר.</span>
       </div>
@@ -150,57 +709,57 @@
   </div>
 </section>
 
-<hr>
+<hr class="divider">
 
-<section id="about">
-  <div>למה אוהד סחלב?</div>
-  <h2>לא סתם טיסת מצנח רחיפה בנתניה</h2>
+<!-- WHY -->
+<section>
+  <div class="section-label">למה אוהד?</div>
+  <h2 class="section-title">לא סתם טיסה</h2>
 
-  <div class="features">
-    <div>
-      <div>🏅</div>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-icon">🏅</div>
       <h3>26 שנות ניסיון</h3>
       <p>מטיס מאז 1998 עם רקורד בטיחות מושלם. אלפי טיסות מעל חופי נתניה.</p>
     </div>
-    <div>
-      <div>🎵</div>
+    <div class="why-card">
+      <div class="why-icon">🎵</div>
       <h3>אקרובטיקה למוזיקה</h3>
       <p>השילוב הייחודי של SOHOY — מנגינות ותנועות אוויריות שיגרמו לך לצרוח מאושר.</p>
     </div>
-    <div>
-      <div>📍</div>
+    <div class="why-card">
+      <div class="why-icon">📍</div>
       <h3>מצוקי נתניה</h3>
-      <p>המראה ונחיתה מאותו המקום ליד כיכר פנצ'ו. נוף מהמם של הים התיכון.</p>
+      <p>המריאה וחניתה מאותו המקום ליד כיכר פנצ'ו. נוף מהמם של הים התיכון.</p>
     </div>
-    <div>
-      <div>⚡</div>
+    <div class="why-card">
+      <div class="why-icon">⚡</div>
       <h3>הטייס הקל בישראל</h3>
       <p>משקלו הנמוך של אוהד אומר יותר חופש, יותר אקרובטיקה, יותר כיף עבורך.</p>
     </div>
   </div>
 </section>
 
-<section id="contact" class="cta-section">
-  <div>מוכן לטוס?</div>
-  <h2>תזמין טיסת חוויה עכשיו</h2>
-  <p>שלח הודעה בוואטסאפ או התקשר ואוהד יחזור אליך תוך דקות</p>
-  
-  <!-- תיקון קישור הטלפון שיהיה לחיץ בנייד -->
-  <a href="tel:0506968511" class="phone-link">📞 050-6968511</a>
-  
-  <a href="https://wa.me/972506968511?text=היי%20אוהד,%20אשמח%20לפרטים%20על%20טיסת%20מצנח%20רחיפה" class="btn-whatsapp-large">
-    📱 שלח הודעה בוואטסאפ
+<!-- CTA -->
+<div class="cta-section" id="contact">
+  <div class="section-label" style="margin-bottom:1rem;">מוכן לטוס?</div>
+  <h2>תזמין עכשיו</h2>
+  <p>שלח הודעה בווטסאפ ואוהד יחזור אליך תוך דקות</p>
+  <a href="tel:+972506968511" class="phone-big">050-6968511</a>
+  <a href="https://wa.me/972506968511?text=היי%20אוהד,%20אשמח%20לפרטים%20על%20טיסת%20מצנח%20רחיפה" class="btn-primary" style="font-size:1.2rem; padding:1.1rem 2.8rem; display:inline-flex;">
+    📱 שלח הודעה בווטסאפ
   </a>
-  <p>📍 נתניה, ליד כיכר פנצ'ו | פעיל 7 ימים בשבוע (בהתאם למזג האוויר)</p>
-</section>
+  <p style="margin-top:1.5rem; color:var(--grey); font-size:0.85rem;">📍 נתניה, ליד כיכר פנצ'ו | פעיל 7 ימים בשבוע</p>
+</div>
 
+<!-- FOOTER -->
 <footer>
   <p>© 2026 אוהד סחלב – מצנחי רחיפה נתניה | 
     <a href="https://wa.me/972506968511">WhatsApp</a> · 
-    <a href="tel:0506968511">050-6968511</a>
+    <a href="tel:+972506968511">050-6968511</a>
   </p>
-  <p style="font-size: 12px; color: #777;">
-    מצנחי רחיפה נתניה | טיסת חוויה נתניה | טיסת טנדם | paragliding netanya | אוהד סחלב SOHOY | ספורט אתגרי בנתניה
+  <p style="margin-top:0.5rem; font-size:0.72rem; color:#445566;">
+    מצנחי רחיפה נתניה | טיסת חוויה נתניה | paragliding netanya | אוהד סחלב SOHOY
   </p>
 </footer>
 
